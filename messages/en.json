@@ -27,5 +27,33 @@
     "select": "Select Language",
     "en": "English",
     "el": "Ελληνικά"
+  },
+  "Navigation": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "signIn": "Sign In"
+  },
+  "Home": {
+    "title": "Welcome to VresMastora",
+    "description": "Your one-stop solution for finding and connecting with local service providers.",
+    "features": {
+      "title": "Key Features",
+      "item1": "Easy service provider search",
+      "item2": "Real-time availability",
+      "item3": "Secure booking system"
+    },
+    "benefits": {
+      "title": "Benefits",
+      "item1": "Save time and effort",
+      "item2": "Compare providers easily",
+      "item3": "Get the best deals"
+    },
+    "cta": {
+      "title": "Get Started",
+      "description": "Join our platform today and find the perfect service provider for your needs.",
+      "button": "Sign Up Now"
+    }
   }
 } 
