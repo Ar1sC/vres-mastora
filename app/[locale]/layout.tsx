@@ -30,8 +30,8 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Providers>
+        <Providers>
+          <NextIntlClientProvider locale={locale} messages={messages}>
             <div className="min-h-screen flex flex-col">
               <Navbar />
               <main className="flex-grow">
@@ -39,8 +39,8 @@ export default async function LocaleLayout({
               </main>
               <Footer />
             </div>
-          </Providers>
-        </NextIntlClientProvider>
+          </NextIntlClientProvider>
+        </Providers>
       </body>
     </html>
   );

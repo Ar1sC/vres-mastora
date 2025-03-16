@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import LanguageSwitcher from '../LanguageSwitcher';
 
 export default function Navbar() {
-  const t = useTranslations('navigation');
+  const t = useTranslations('Navigation');
 
   return (
     <nav className="bg-white shadow">
