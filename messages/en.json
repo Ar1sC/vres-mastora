@@ -1,0 +1,31 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Find the Perfect Service Provider",
+      "subtitle": "Connect with trusted professionals for all your needs",
+      "searchPlaceholder": "What service are you looking for?"
+    },
+    "features": {
+      "title": "Why Choose Us",
+      "trusted": "Trusted Providers",
+      "verified": "Verified Reviews",
+      "secure": "Secure Payments"
+    }
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "signInWithGoogle": "Sign in with Google"
+  },
+  "language": {
+    "select": "Select Language",
+    "en": "English",
+    "el": "Ελληνικά"
+  }
+} 

@@ -1,47 +1,59 @@
 'use client';
 
 import Link from 'next/link';
-import { useSession } from 'next-auth/react';
+import { useTranslations } from 'next-intl';
+import LanguageSwitcher from '../LanguageSwitcher';
 
 export default function Navbar() {
-  const { data: session } = useSession();
+  const t = useTranslations('navigation');
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="bg-white shadow">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
-            <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-blue-600">VresMastora</span>
-            </Link>
+            <div className="flex-shrink-0 flex items-center">
+              <Link href="/" className="text-xl font-bold text-gray-800">
+                VresMastora
+              </Link>
+            </div>
+            <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+              <Link
+                href="/"
+                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              >
+                {t('home')}
+              </Link>
+              <Link
+                href="/services"
+                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              >
+                {t('services')}
+              </Link>
+              <Link
+                href="/about"
+                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              >
+                {t('about')}
+              </Link>
+              <Link
+                href="/contact"
+                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              >
+                {t('contact')}
+              </Link>
+            </div>
           </div>
-          
           <div className="flex items-center">
-            <Link href="/services" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-              Services
+            <div className="mr-4">
+              <LanguageSwitcher />
+            </div>
+            <Link
+              href="/auth/signin"
+              className="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700"
+            >
+              {t('signIn')}
             </Link>
-            <Link href="/professionals" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-              Professionals
-            </Link>
-            {session ? (
-              <>
-                <Link href="/dashboard" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-                  Dashboard
-                </Link>
-                <Link href="/api/auth/signout" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-                  Sign Out
-                </Link>
-              </>
-            ) : (
-              <>
-                <Link href="/api/auth/signin" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
-                  Sign In
-                </Link>
-                <Link href="/register" className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-medium">
-                  Register
-                </Link>
-              </>
-            )}
           </div>
         </div>
       </div>
