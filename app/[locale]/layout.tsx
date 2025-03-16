@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import '../globals.css';
-import Navbar from '../components/layout/Navbar';
+import ClientNavbar from '../components/layout/ClientNavbar';
 import Footer from '../components/layout/Footer';
 import { Providers } from '../providers';
 
@@ -33,7 +33,7 @@ export default async function LocaleLayout({
         <Providers>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <div className="min-h-screen flex flex-col">
-              <Navbar />
+              <ClientNavbar />
               <main className="flex-grow">
                 {children}
               </main>
